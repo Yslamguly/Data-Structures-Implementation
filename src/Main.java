@@ -16,10 +16,9 @@ public class Main {
         linkedList.set(1,6);
         linkedList.insert(0,10);
         linkedList.remove(2);
+
+        linkedList.reverse();
         System.out.println("Linked list: ");
         linkedList.printList();
-
-
-
     }
 }

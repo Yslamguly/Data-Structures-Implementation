@@ -16,7 +16,7 @@ public class Main {
         linkedList.set(1,6);
         linkedList.insert(0,10);
         linkedList.remove(2);
-
+        System.out.println("Element by index: " + linkedList.get(3).value);
         linkedList.reverse();
         System.out.println("Linked list: ");
         linkedList.printList();

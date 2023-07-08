@@ -17,6 +17,7 @@ public class Main {
         doublyLinkedList.prepend(3);
         doublyLinkedList.set(0,78);
         doublyLinkedList.insert(1,55);
+        doublyLinkedList.remove(0);
         doublyLinkedList.getLength();
 
         doublyLinkedList.printList();

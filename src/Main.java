@@ -14,8 +14,8 @@ public class Main {
 
         doublyLinkedList.getHead();
         doublyLinkedList.getTail();
-        doublyLinkedList.getLength();
         doublyLinkedList.prepend(3);
+        doublyLinkedList.getLength();
 
         doublyLinkedList.printList();
 

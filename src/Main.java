@@ -7,6 +7,9 @@ public class Main {
     public static void main(String[] args) {
         DoublyLinkedList doublyLinkedList = new DoublyLinkedList(5);
         doublyLinkedList.getHead();
+
+        doublyLinkedList.append(6);
+
         doublyLinkedList.getTail();
         doublyLinkedList.getLength();
         doublyLinkedList.printList();

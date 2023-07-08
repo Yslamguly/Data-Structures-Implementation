@@ -6,12 +6,17 @@ import linkedlist.LinkedList;
 public class Main {
     public static void main(String[] args) {
         DoublyLinkedList doublyLinkedList = new DoublyLinkedList(5);
-        doublyLinkedList.getHead();
 
         doublyLinkedList.append(6);
 
+        doublyLinkedList.removeLast();
+
+
+        doublyLinkedList.getHead();
         doublyLinkedList.getTail();
         doublyLinkedList.getLength();
+        doublyLinkedList.prepend(3);
+
         doublyLinkedList.printList();
 
     }

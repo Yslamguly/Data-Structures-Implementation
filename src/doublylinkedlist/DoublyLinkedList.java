@@ -22,6 +22,7 @@ public class DoublyLinkedList {
 
     public void printList(){
         Node temp = head;
+        System.out.println("Doubly linked list values: ");
         while (temp != null){
             System.out.println(temp.value);
             temp = temp.next;
@@ -46,6 +47,35 @@ public class DoublyLinkedList {
             tail.next = newNode;
             newNode.prev = tail;
             tail = newNode;
+        }
+        length++;
+    }
+    public Node removeLast(){
+        if(length == 0){
+            return null;
+        }
+        Node temp = tail;
+        if(length == 1){
+            head= null;
+            tail = null;
+        }
+        else{
+            tail = tail.prev;
+            tail.next = null;
+            temp.prev = null;
+        }
+        length--;
+        return temp;
+    }
+    public void prepend(int value){
+        Node newNode = new Node(value);
+        if(length == 0){
+            head = newNode;
+            tail = newNode;
+        }else{
+            head.prev = newNode;
+            newNode.next = head;
+            head = newNode;
         }
         length++;
     }

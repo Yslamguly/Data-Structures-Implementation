@@ -14,6 +14,7 @@ public class Main {
         linkedList.prepend(9);
 
         linkedList.set(1,6);
+        linkedList.insert(0,10);
         System.out.println("Linked list: ");
         linkedList.printList();
 

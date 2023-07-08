@@ -15,7 +15,7 @@ public class DoublyLinkedList {
         Node(int value){
             this.value = value;
         }
-        int value;
+        public int value;
         Node next;
         Node prev;
     }
@@ -94,6 +94,23 @@ public class DoublyLinkedList {
             temp.next = null;
         }
         length--;
+        return temp;
+    }
+    public Node get(int index){
+        if(index >= length || index < 0 ){
+            return null;
+        }
+        Node temp = head;
+        if(index < length / 2){
+            for(int i = 0; i < index; i++){
+                temp = temp.next;
+            }
+        }else {
+            temp = tail;
+            for(int i = length - 1; i > index; i--){
+                temp = temp.prev;
+            }
+        }
         return temp;
     }
 }

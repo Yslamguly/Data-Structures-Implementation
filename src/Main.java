@@ -15,6 +15,7 @@ public class Main {
 
         linkedList.set(1,6);
         linkedList.insert(0,10);
+        linkedList.remove(2);
         System.out.println("Linked list: ");
         linkedList.printList();
 

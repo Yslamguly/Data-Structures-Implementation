@@ -153,7 +153,6 @@ public class LinkedList {
         }
         Node prev = get(index - 1);
         Node temp = prev.next;
-
         prev.next = temp.next;
         temp.next = null;
         length--;

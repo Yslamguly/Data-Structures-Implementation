@@ -10,11 +10,11 @@ public class LinkedList {
     private Node head;
     private Node tail;
     private int length;
-    class Node {
+    public class Node {
         Node(int value){
             this.value = value;
         }
-        int value;
+        public int value;
         Node next;
     }
     public void printList(){
@@ -55,6 +55,74 @@ public class LinkedList {
         }
         length++;
     }
-    public void prepend (int value){}
-    public boolean insert (int index, int value){return true;}
+    public Node removeLastItem(){
+        if(length == 0){
+            return null;
+        }
+        Node temp = head;
+        Node pre = head;
+        while (temp.next != null){
+            pre = temp;
+            temp = temp.next;
+        }
+        tail = pre;
+        tail.next = null;
+        length--;
+        if(length == 0){
+            head = null;
+            tail = null;
+        }
+        return temp;
+    }
+    public void prepend (int value){
+        Node newNode = new Node(value);
+        if(length == 0){
+            head = newNode;
+            tail = newNode;
+        }
+        else{
+            newNode.next = head;
+            head = newNode;
+        }
+        length++;
+    }
+    public Node removeFirstItem(){
+        if(length == 0){
+            return null;
+        }
+        Node temp = head;
+        head = head.next;
+        temp.next = null;
+        length--;
+        if(length == 1){
+            tail = null;
+        }
+        return temp;
+    }
+    public Node get(int index){
+        if(index >= length || index < 0){
+            return null;
+        }
+        Node temp = head;
+        int i = 0;
+        while (i != index){
+            temp = temp.next;
+            i++;
+        }
+        return temp;
+    }
+    public boolean set(int index, int value){
+        if(index >= length || index < 0){
+            return false;
+        }
+        Node temp = get(index);
+        if(temp!=null){
+            temp.value = value;
+            return true;
+        }
+        return false;
+    }
+    public boolean insert (int index, int value){
+        return true;
+    }
 }
